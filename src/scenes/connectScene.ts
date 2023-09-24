@@ -5,7 +5,7 @@ import defaultScene from '../scenes/defaultScene'
 export default class connectScene extends Phaser.Scene
 {
     titleText
-    ipString : string = "localhost"
+    ipString : string = "localhost:80"
     ipText
     pendingChange : boolean = false
     preload() {

@@ -17,7 +17,7 @@ export default class defaultScene extends Phaser.Scene
     
     boardSprite
     ws
-    ipStr : string = ""
+    ipStr : string = "localhost:80"
     init(data){
         this.ipStr = data.ipAddy
     }
@@ -51,7 +51,7 @@ export default class defaultScene extends Phaser.Scene
     create()
     {
 
-        this.ws = new WebSocket('ws://'+this.ipStr+':80/goGame/go')
+        this.ws = new WebSocket('ws://'+this.ipStr+'/goGame/go')
 
         this.ws.addEventListener("open", (event) => {
             //
